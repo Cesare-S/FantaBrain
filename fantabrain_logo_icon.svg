@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+
+
+    <g transform="translate(256.0,256.0)">
+      <polygon points="0,-200 173,-100 173,100 0,200 -173,100 -173,-100" fill="none" stroke="#39FF14" stroke-width="18" stroke-linejoin="round"/>
+      <!-- Inner lines like a simplified ball/circuit -->
+      <line x1="-173" y1="-100" x2="173" y2="-100" stroke="#39FF14" stroke-width="10" opacity="0.5"/>
+      <line x1="-173" y1="100" x2="173" y2="100" stroke="#39FF14" stroke-width="10" opacity="0.5"/>
+      <circle cx="0" cy="0" r="60" fill="#39FF14" opacity="0.18"/>
+      <!-- Nodes -->
+      <circle cx="-90" cy="-30" r="9" fill="#39FF14"/>
+      <circle cx="110" cy="20" r="9" fill="#39FF14"/>
+      <line x1="-90" y1="-30" x2="0" y2="0" stroke="#39FF14" stroke-width="8"/>
+      <line x1="0" y1="0" x2="110" y2="20" stroke="#39FF14" stroke-width="8"/>
+      <!-- Monogram FB -->
+      <g transform="scale(1.0)">
+        <path d="M-115,-10 L-30,-10 L-30,20 L-85,20 L-85,60 L-115,60 Z" fill="#000000"/>
+        <path d="M30,-60 h60 a40,40 0 0 1 0,80 h-60 v-80 Z
+                 M60,-30 v20 h25 a10,10 0 0 0 0,-20 Z
+                 M30,10 h60 a40,40 0 0 1 0,80 h-60 v-80 Z
+                 M60,40 v20 h25 a10,10 0 0 0 0,-20 Z" fill="#000000"/>
+      </g>
+    </g>
+    
+</svg>
