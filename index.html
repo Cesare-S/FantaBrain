@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FantaBrain — Il cervello per la tua asta</title>
+  <meta name="description" content="Assistente d’asta per Fantacalcio: Classic & Mantra, MaxBid realistico, rosa bilanciata.">
+  <meta property="og:title" content="FantaBrain — Il cervello per la tua asta">
+  <meta property="og:description" content="Assistente d’asta per Fantacalcio: Classic & Mantra, MaxBid realistico, rosa bilanciata.">
+  <meta property="og:image" content="og_social_card.svg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root{
+      --black: #000000;
+      --lime: #39FF14;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--white); background: var(--black); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+    .hero { display:flex; gap: 24px; align-items:center; flex-wrap: wrap; }
+    .hero img.logo { width: 160px; height: 160px; }
+    h1 { font-size: 48px; margin: 0; line-height: 1.1; }
+    p.lead { font-size: 20px; opacity: 0.9; }
+    .cta { display:inline-block; background: var(--lime); color: var(--black); padding: 14px 22px; border-radius: 10px; font-weight: 800; text-decoration: none; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; margin-top: 36px; }
+    .card { background: #0e0e0e; border: 1px solid #1e1e1e; border-radius: 16px; padding: 16px; }
+    .card h3 { margin-top:0; color: var(--lime);}
+    footer { opacity:0.7; font-size: 13px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <img class="logo" src="fantabrain_logo_icon.svg" alt="FantaBrain logo">
+      <div>
+        <h1>FantaBrain</h1>
+        <p class="lead">Il cervello per la tua asta. Classic &amp; Mantra • MaxBid realistico • Rosa bilanciata.</p>
+        <a class="cta" href="#beta">Iscriviti alla beta gratuita</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card"><h3>Realismo d’asta</h3><p>MaxBid ≥ QtA e pesi per slot: spendi tutto il budget in modo credibile.</p></div>
+      <div class="card"><h3>Classic &amp; Mantra</h3><p>Copertura micro-ruoli e moduli: 3-4-3, 4-3-3, 4-4-2, 3-5-2.</p></div>
+      <div class="card"><h3>Consigli intelligenti</h3><p>Alternative per ogni slot, esclusi i già presi, ordinati per valore.</p></div>
+    </div>
+
+    <div id="beta" class="card" style="margin-top:36px;">
+      <h3>Partecipa alla beta</h3>
+      <p>Lascia la tua email e ricevi l’accesso appena apriamo.</p>
+      <!-- Placeholder form: sostituisci action con il tuo endpoint (Mailchimp/Substack) -->
+      <form method="post" action="#" onsubmit="alert('Grazie! Verrai contattato per la beta.'); return false;">
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <input type="email" name="email" placeholder="la-tua@email.it" required
+            style="flex:1; min-width:240px; padding:12px; border-radius:10px; border:1px solid #333; background:#111; color:white;">
+          <button class="cta" type="submit">Richiedi accesso</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>© 2025 FantaBrain — Il cervello per la tua asta</footer>
+  </div>
+</body>
+</html>
