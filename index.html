@@ -49,13 +49,29 @@
       <h3>Partecipa alla beta</h3>
       <p>Lascia la tua email e ricevi l’accesso appena apriamo.</p>
       <!-- Placeholder form: sostituisci action con il tuo endpoint (Mailchimp/Substack) -->
-      <form method="post" action="#" onsubmit="alert('Grazie! Verrai contattato per la beta.'); return false;">
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <input type="email" name="email" placeholder="la-tua@email.it" required
-            style="flex:1; min-width:240px; padding:12px; border-radius:10px; border:1px solid #333; background:#111; color:white;">
-          <button class="cta" type="submit">Richiedi accesso</button>
-        </div>
-      </form>
+      <form name="beta" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+  <!-- Netlify: identificatore del form -->
+  <input type="hidden" name="form-name" value="beta">
+  <!-- Honeypot antispam (nascosto via CSS) -->
+  <p class="hidden">
+    <label>Non compilare questo campo: <input name="bot-field"></label>
+  </p>
+
+  <div style="display:flex; gap:12px; flex-wrap:wrap;">
+    <input type="email" name="email" placeholder="la-tua@email.it" required
+      style="flex:1; min-width:240px; padding:12px; border-radius:10px; border:1px solid #333; background:#111; color:white;">
+    <button class="cta" type="submit">Richiedi accesso</button>
+  </div>
+  <small style="display:block; margin-top:8px; opacity:.7">
+    Iscrivendoti accetti di ricevere aggiornamenti sulla beta. Potrai disiscriverti in ogni momento.
+  </small>
+</form>
+
+<!-- Aggiungi nel <head> o in un <style> della pagina -->
+<style>
+  .hidden{ position:absolute; left:-9999px; }
+</style>
+
     </div>
 
     <footer>© 2025 FantaBrain — Il cervello per la tua asta</footer>
