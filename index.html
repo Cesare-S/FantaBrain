@@ -74,21 +74,19 @@
 </body>
 </html>
 <script>
-const form = document.querySelector('form[name="beta"]');
+const form = document.querySelector('#beta-form');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
-  // Netlify richiede 'form-name' nel body
   if (!data.get('form-name')) data.append('form-name', 'beta');
 
   await fetch('/', {
     method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams(data).toString()
   });
 
-  window.location = '/success';
-
-  location.reload()
+  alert("🎉 Grazie! La tua iscrizione è stata registrata.");
+  form.reset(); // svuota campo
 });
 </script>
